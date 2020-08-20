@@ -1,8 +1,4 @@
 /node_modules
 npm-debug.log
 .DS_Store
-.app1.js
-.styles1.css
-.edit1.ejs
-.footer2.ejs
 /*.env
