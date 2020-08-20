@@ -3,7 +3,6 @@ const bodyParser=require("body-parser");
 const ejs=require("ejs");
 const date=require(__dirname+"/date.js")
 const mongoose=require("mongoose");//1stMangoose: To use mangoose after install int npm i mongoose
-const e = require("express");
 
 // mongoose.connect('mongodb://localhost:27017/ToDoListDB', {useUnifiedTopology: true,useNewUrlParser: true});//2ndMongoose:This is the minimum needed to connect the ToDoListDB database running locally on the default port (27017)
 
@@ -18,15 +17,12 @@ app.use(express.static(__dirname + '/public'));
 
 // 3rdMongoose : create new schema 
 const itemsShema ={
-    Name:String,
+    Name:String
 }; 
 
 const listSchema={
-    Name: String,
-    Maintitle:String,
-    Subtilte:String,
-    Paragraphs:[]
-    
+    Name:String,
+    Itemlist:[itemsShema]
 }
 
 // 4thMongoose: create mongoose.mode  note: item should be singular and mongoose autumatically will make it plural 
@@ -34,60 +30,36 @@ const listSchema={
 const Item = mongoose.model("Item", itemsShema);
 const List = mongoose.model("List",listSchema);
 
+
 var items =[]
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var d = new Date();
 var day=days[d.getDay()];
 
 const item1 = new Item({
-    Name: "Add To-Do:",
-    Maintitle:"firt sub",
-    Subtilte:"second sub",
-    Paragraphs:["Parg1"]
+    Name: "Add To-Do:"
 });
 
 defultList=[item1]
 
 app.get("/",function(req,res){
-    List.find(function(err,allItems){
-        if(!err){
-            if(allItems){
-            // software engineer 
-            allItems.map(item => {
-                if (item.Name === "Software Engineer"){
-                    app.locals.SEitem=item
-                }else// rboo 
-                if (item.Name === "Rboo"){
-                    app.locals.Rbooitem=item
-                }else // kbr 
-                if (item.Name === "Kbr Kellogg Brown & Root"){
-                    app.locals.Kbritem=item
-                }else // Advance Software Engineering agile
-                if (item.Name === "Advance Software Engineering"){
-                    app.locals.Agileitem=item
-                }else // advvance database azure
-                if (item.Name === "Advance Database"){
-                    app.locals.Azureitem=item
-                }else // aws
-                if (item.Name === "Cloud Computing | Spring 2020"){
-                    app.locals.Awsitem=item
-                }else // web data mangment
-                if (item.Name === "Web Data Mangment"){
-                    app.locals.Wdmitem=item
+    Item.find(function(err,itemsFromDb){
+        if (itemsFromDb.length===0){
+            Item.insertMany([item1],function(err){
+                if (err){
+                    console.log(err)
+                }else{
+                    console.log("Items has been added successfully")
                 }
-
+                res.redirect("/");
             });
-
-            app.locals.myVar=allItems
-            }else(
-                console.log("items not found")
-            )
+            
         }else{
-            console.log(err)
+            res.render("list",{title:day, items:itemsFromDb});
         }
-
-        res.render("list");
-    })
+    });
+    // Or we can use the other funciton inside our modual app.js "day" 
+    // By adding it like:  var Day_value =date.Day();
 });
 
 // Every time create new list 
@@ -122,7 +94,7 @@ app.get("/:next",function(req,res){
 });
 //Get post req from list.ejs file
 app.post("/",function(req,res){
-
+    
     const title1=req.body.button
     const todoitem=req.body.todoitem 
     //Create new item and pass the ToDo in it as name
@@ -186,69 +158,6 @@ app.post("/Delete",function(req,res){
 
 });
 
-
-app.get('/edit/info',function(req,res){
-    console.log("accesed log/other")
-
-    res.render("edit");
-});
-
-app.post("/edit/info",function(req,res){
-    
-    const listParagraphs=[];
-    const listofwords =(req.body.name).trim().split(" ");
-
-    const listOfUpercase=listofwords.map((word=>{
-        //Capitalize each letter of every word
-        const listLowercase= word.toLocaleLowerCase();
-        return listLowercase.charAt(0).toUpperCase() + listLowercase.slice(1);
-    }))
-        const name=listOfUpercase.join(" ")
-      
-   
-    const maintitle=req.body.maintitle;
-    const subtitle=req.body.subtitle;
-    const obj=req.body;
-    // Add the paragraph if it is not empty and not one of the first three 
-    for (const prop in obj){
-        if (obj[prop]!="" && prop !="name" && prop !="maintitle" && prop!="subtitle" ){
-            listParagraphs.push(obj[prop]);
-
-        }
-    }
-
-    List.findOne({Name:name},function(err,returnedlist){
-        if(!err){
-            if (returnedlist){
-                console.log(returnedlist)
-            }else{
-                const listSchema1=new List({
-                    Name: name,
-                    Maintitle:maintitle,
-                    Subtilte:subtitle,
-                    Paragraphs:listParagraphs 
-                });
-                
-                listSchema1.save(function(err){
-                    if (err){
-                        console.log(err)
-                    }else{
-                        console.log("saved success");
-                        res.redirect("/edit/info")
-                    }
-                })
-
-
-            }
-        }
-
-
-    } )
-
-
-    
-});
-    
 
 let port = process.env.PORT;
 if (port == null || port == "") {

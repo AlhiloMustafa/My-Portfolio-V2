@@ -1,0 +1,104 @@
+<div id="carousel-projects" class="carousel slide" data-ride="false" data-interval="false" >
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <% if (Agileitem) { %>
+            <h5> <%=Agileitem.Maintitle%> </h5>
+          <% } else { %>
+            <h5>Boohiss no myVar!</h5>
+          <% } %>
+          <h3><%=Agileitem.Subtilte%></h3>
+          <ul class="ul_projects">
+            <%Agileitem.Paragraphs.map(parag=>{%>
+              <p><%=parag %></p>
+              <% });%>
+          </ul> 
+          <img  class="project-img" src="images/agile.png" alt="tc-logo">
+        </div>
+
+        <div class="carousel-item" >
+          <% if (Azureitem) { %>
+            <h5> <%=Azureitem.Name%> </h5>
+          <% } else { %>
+            <h5>Boohiss no myVar!</h5>
+          <% } %>
+          <h3><%=Azureitem.Maintilte%></h3>
+          <h3><%=Azureitem.Subtilte%></h3>
+          <ul class="ul_projects">
+            <%Azureitem.Paragraphs.map(parag=>{%>
+              <p><%=parag %></p>
+              <% });%>
+          </ul> 
+          <img  class="Agile-img" src="images/azureIcon.png" alt="tc-logo">
+          
+        </div>
+        <div class="carousel-item" >
+          <h5>Advance Database </h5>
+          <% if (Awsitem) { %>
+            <h3> <%=Awsitem.Name%> </h3>
+          <% } else { %>
+            <h5>Boohiss no myVar!</h5>
+          <% } %>
+          <h3><%=Awsitem.Subtilte%></h3>
+          
+          <ul class="ul_projects">
+            <%Awsitem.Paragraphs.map(parag=>{%>
+              <p><%=parag %></p>
+              <% });%>
+          </ul> 
+          <img  class="Agile-img" src="images/aws.png" alt="tc-logo">
+          
+        </div>
+        <div class="carousel-item" >
+          <% if (Wdmitem) { %>
+            <h5> <%=Wdmitem.Name%> </h5>
+          <% } else { %>
+            <h5>Boohiss no myVar!</h5>
+          <% } %>
+          <h3><%=Wdmitem.Subtilte%></h3>
+          
+          <ul class="ul_projects">
+            <%Wdmitem.Paragraphs.map(parag=>{%>
+              <p><%=parag %></p>
+              <% });%>
+          </ul> 
+          <p>
+              <img  class="web-img" src="images/protfolio.JPG" alt="tc-logo">
+            </a>
+          </p>
+          
+        </div>
+        <div class="carousel-item" >
+          <h5>Web Resume</h5>
+          <h3>Personal Project</h3>
+
+          <ul class="ul_projects">
+            
+            <p>This project develped with Node.js, MongoDB, Javascript ES6, HTML 5, CSS 3, and Bootstrap 4. It is portfolio that includes my education, experience, projects, and all the contact details. It contains all the links to my social media, and the user able to download my pdf resume</p>
+            
+
+          </ul> 
+
+        </ul> 
+        <p>
+          Click to see the project : <br><br>
+           <a href="">
+            <img  class="web-img" src="images/webpicture.JPG" alt="tc-logo">
+          </a>
+        </p>
+
+          
+          
+        </div>
+
+        
+    </div>
+    <a class="carousel-control-prev" href="#carousel-projects" role="button" data-slide="prev" data-pause="hover">
+        <span class="carousel-control-prev-icon" ></span>
+        
+    </a>
+    <a class="carousel-control-next" href="#carousel-projects" role="button" data-slide="next" data-pause="hover">
+        <span class="carousel-control-next-icon" ></span>
+        
+    </a>
+</div>

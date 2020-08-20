@@ -1,35 +1,59 @@
 
-<%- include('header'); -%>
+<%- include('head'); -%>
 
-<body >
-    <div class="padding">
-        <h1><%=title%></h1>
-        <ol>
-            <% items.forEach(function(item){ %>
-                <!-- Loop throgh the list of items  -->
-                <div class="form-check">
-                    <form action="/Delete" method="POST" >
-                        <input class="form-check-input"  name="mycheckbox" type="checkbox" value="<%= item._id %>" id="defaultCheck1" onChange="this.form.submit()"  data-valuetwo="1" >
-                        <label class="form-check-label" for="defaultCheck1" >
-                            <%=item.Name%>
-                        </label>
-                        <!-- Added extra input type= hidden to pass another value to app.js  -->
-                        <input type="hidden" name="checkbox2" value=<%= title %> >
-                    </form>
-                    <hr>
-                  </div>
-            <% }); %>
-        </ol>
-        <form class="padding " action="/" method="POST" >
-            <input type="text" name="todoitem" placeholder="Add To-Do Here" value="">
-            <button  class="myButton" type="submit" name="button" value=<%= title %> >Add</button>
-        </form>
-    </div>
+<body>
 
-    
+    <section class="colored"  id="title">
+            <div class="container-fluid">
+            <!-- nav  -->
+                <%- include('nav'); -%>
+            <!-- Title -->
+                <%- include('title'); -%>
+            </div>
+    </section>
+
+
+
+    <!-- details_section -->
+    <section class="whitecolor"  id="details_section">
+        <%- include('details'); -%>
+    </section>
+
+
+
+    <!-- project  -->
+    <section class="colored"  id="projects">
+        <h5><i class=" fas fa-head-side-virus"></i>  PROJECTS</h5>
+    </section>
+    <!-- projects -->
+    <section class="colored"  id="testimonials" data-ride="false" data-interval="false" >
+        <%- include('projects'); -%>
+    </section>
+
+
+
+    <!-- organizations -->
+    <section class="whitecolor" id="org_section">
+        <%- include('organizations'); -%>
+    </section>
+
+
+
+    <!-- summary -->
+    <section  class="colored" id="summary">
+        <%- include('summary'); -%>
+    </section>
+
+
+
+    <!-- Footer -->
+    <section class="whitecolor" >
+        <!-- <%#include('footer'); -%>  -->
+    </section>
+
 
     
 </body>
-
-
 <%- include('footer'); -%>
+
+</html>

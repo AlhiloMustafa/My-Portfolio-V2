@@ -1,79 +1,407 @@
-.body{
-    background-color: wheat;
-}
-h1{
 
-}
-.padding{
-  padding:2% 60% 2% 10%;
-}
-.topnav {
-  display: block;
-  background-color: #233142;
-  overflow: hidden;
+
+h2,h3,h5,h6{
+  /* color:#1e2022; */
+  font-weight: bold;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+h6,h5{
+  font-family: 'Poppins', sans-serif;
+}
+h4{
+  color: #b8b0b0;
+  font-weight: bold;
+}
+h2{
+  font-size: large;
+}
+
+h3{ 
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
+h5{
+  font-size: 2.5rem;
+  margin-bottom: 0%;
+}
+
+h4{ 
+  font-size: 2.0rem;
+}
+
+h6{ 
+  font-size: 13px;
+  padding: 10px 0px 0px;
+}
+           
+
+#profilePict{
+  width: 215px;
+  padding:0px 0px 0px 20px;
+}
+
+#socialmedialinks_div{
+  padding-left: 0px;
   
-  float: left;
-  color: #f2f2f2;
+}
+#objective-div{
+  padding-right: 1.60rem;
+  padding-left: 0rem;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+#profielfont{
+  
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  
+}
+
+p{
+  color: #52616b;
+  font-family: 'Poppins', sans-serif;
+  font-size: smaller;
+  /* text-align: justify;
+   */
+
+}
+.navbar-nav{
+  padding: 0% 5rem;
+}
+.navbar-light .navbar-nav .active{
+  color: greenyellow;
+}
+
+.nav-item {
+  
+  padding: 0 3%;
+  font-size: large;
+}
+
+.navbar-brand{
+  
+  
+  font-family: 'Poppins', sans-serif;
+  line-height: 2.0;
+  font-size: 3rem;
+  margin-left: 20px;
+}
+#brand1{
+  color: #b8b0b0;
+  /* color: #7f9db5; */
+  
+  font-weight: bold;
+
+}
+
+.container-fluid{
+  padding: 5% 10% 10%;
+}
+
+.row{
+  margin:0rem 0px;
+  padding: 2rem 0rem;
+  background-color: white;
+  background-color:#f0f5f9;
+  /* background-color:#f0f5f9; */
+  /* background-color:#aeaea9; */
+  
+}
+
+/* title  */
+
+.td-title{
+
+  padding-left: 20px;
+}
+.line{
+  padding: 0px 20px 0px 20px;
+}
+/* social media */ 
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  /* border-color: rgba(0,0,0,0.2); */
+  font-size: small;
+}
+
+.btn-gitHub {
+  color: #fff;
+  background-color:#1e2022;
+  /* border-color: rgba(0,0,0,0.2); */
+  font-size: small;
+}
+
+.btn-gmail {
+  color: #fff;
+  background-color: #7a7473;
+  /* 1c */
+  border-color: rgba(0,0,0,0.2);
+  font-size: small;
+  margin-top: 10px;
+}
+.btn-download {
+  color: #fff;
+  background-color: rgb(60, 109, 60);
+  border-color: rgba(0,0,0,0.2);
+  font-size: small;
+}
+.btn-phone {
+  color: #fff;
+  background-color: #F95959;
+  border-color: rgba(0,0,0,0.2);
+  font-size: small;
+}
+.btn-social {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-social:hover {
+  color: #eee;
+}
+
+.btn-social :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  padding: 7px;
+  font-size: 1.6em;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.navlink{
+  color: #b8b0b0;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #f95959;
-  color: white;
+
+/* details_section */
+
+#details_section{
+  padding: 5% 10%;
+  
 }
 
-/* footer  */
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #f95959;
-    color: white;
-    text-align: center;
+li{
+  color: #52616b;
+  font-family: 'Poppins', sans-serif;
+  font-size: smaller;
+  /* text-align:justify;  
+  text-justify:none; */
+}
+
+.icon{
+  
+  color: #F95959;
+ 
+}
+
+.icon:hover{
+  color: #52616b;
+}
+
+.downloadbutton{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+
+/* projects */
+
+#projects{
+  text-align: center;
+  padding: 1% 10%;
+ 
+}
+
+/* #testimonials */
+
+#testimonials{
+  text-align: center;
+
+}
+
+.carousel-item{
+  height:auto;
+  background-color:#f0f5f9;
+  text-align: center;
+}
+#carousel-projects{
+  padding: 1% 10%;
+}
+.ul_projects{
+  font-size:larger;
+  padding:5% 10% 0%;
+}
+.project-img{
+  width: 30%;
+  padding: center;
+  padding-bottom: 20px;
+}
+.web-img{
+  width: 30%;
+  padding: center;
+  padding-bottom: 20px;
+  border-color:black;
+}
+.Agile-img {
+  width: 15%;
+ 
+  padding: auto;
+}
+@media only screen and (max-device-width: 414px) {
+  
+  /* start  */
+  
+  /* .row {
+      display: flex;
+      flex-direction: column; 
+      width:100%;
+    }
+  #objective-div{
+   order: 2;
+  } */
+  /* end  */
+  
+  #profilePict{
+      width: 50%;
+  }
+  #title{
+      text-align: center
+  
+  }
+  
+  #objective-div{
+
+  text-align: justify;
+  text-justify: inter-word;
+  text-align: center;
+}
+
+}
+
+@media (max-width:1200px){
+
+ #profilePict{
+     width: 90%;   
+   }
+
+ .nav-link {
+   display: block; 
+   font-size: 14px;
+   color: green;
+  }
+
+ .nav-item.active{
+     padding: 0px;
   }
 
 
-  /* form check  */
-.form-check{
-  margin: 1px;
-  border-color: gray;
+
+
+/*@media only screen and (min-device-width: 480px)*/
+
+/*{*/
+
+/*    #profilePict{*/
+/*        width: 50%;*/
+/*    }*/
+/*    #title{*/
+/*        text-align: center;*/
+  
+/*    }*/
+/*    #objective-div{*/
+
+/*        text-align: justify;*/
+/*        text-justify: inter-word;*/
+/*        text-align: center;*/
+/*    }*/
+
+  #brand1{
+  
+      font-size: medium;
+  
+  }
+  .nav-item{
+      font-size: small;
+  }
 }
 
-/* add  */
-.myButton {
-	box-shadow:inset 0px 39px 0px -24px #5b7291;
-	background-color:#455d7a;
-	border-radius:4px;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:6px 15px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+
+/* organization section */
+#org_section{
+  padding: 5% 10%;
+  
 }
-.myButton:hover {
-	background-color:#5d738b;
+
+
+.row3{
+  margin:0rem 0px;
+  padding: 1rem 0rem;
+  background-color:#f0f5f9;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
+
+/* summary */
+#summary{
+
+  
+  padding: 5% 10%;
+ 
+
+}
+.row4{
+  text-align: center;
+  
+  padding: 2% 5%;
+  background-color:#f0f5f9;
+
+}
+#secondDownload_div{
+  margin: auto;
+
+
+}
+
+/* footer */
+
+#footer{
+  padding: 1% 0% 1%;
+  text-align: center;
+ 
+}
+
+/* sections color */
+.colored{
+  background-color: #52616b;
+  /* background-color: #A0BACC; */
+
+}
+
+.whitecolor{
+ 
+  background-color: white;
+
+}
+
+a{
+color:#537791;   
+}
+
+
+/* nav-bar */
+.navbar-light .navbar-nav .active>.nav-link{
+  color: #b8b0b0;
 }

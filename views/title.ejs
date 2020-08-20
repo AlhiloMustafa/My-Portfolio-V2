@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-lg-3 " ><img id="profilePict" src="images/mustafa.png" alt="mustafa"> </div>
+          <div class="col-lg-5 col-md-3 col-sm-12" id="objective-div" > <% if (SEitem) { %>
+            <h1 id="profielfont"> <%=SEitem.Name%> </h1><p><%=SEitem.Paragraphs[0]%></p>
+          <% } else { %>
+            <h1>Boohiss no myVar!</h1>
+          <% } %>
+              
+                          <table>
+                              <tr>
+                              <td>
+                                  <h6>SCHOOLE</h6>
+                              </td>
+                              <td class="td-title">
+                                  University of Texas at Arlington
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>
+                                  <h6>DEGREE</h6>
+                              </td>
+                              <td class="td-title">
+                                  Master of CS | May 2020
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>
+                                  <h6>CAREER LEVEL</h6>
+                              </td>
+                              <td class="td-title">
+                                  Entry-Level
+                              </td>
+                              </tr>
+                              
+                          </table>
+                      <br>
+              </div>
+      <div class="col-lg-3 col-md-6 col-sm-12" id="socialmedialinks_div">
+          <p><%=SEitem.Paragraphs[1]%></p>
+          <button type="button" class="btn btn-block btn-social btn-facebook" onclick="window.location.href='https://www.linkedin.com/in/mustafa-alhilo-08736214b/';"> <i class="fab fa-linkedin" ></i> Mustafa Alhilo</button>
+          <button type="button" class="btn btn-block btn-social btn-gitHub" onclick="window.location.href='https://github.com/AlhiloMustafa';"> <i class="fab fa-github"></i> AlhiloMustafa</button>
+          <a href="mailto:mustafa.alhilo@mac"><button type="button" class="btn btn-block btn-social btn-gmail" > <i class="fas fa-envelope-square"></i> mustafa.alhilo@mavs.uta.edu</button></a>
+          <form  class="downloadbutton" method="get" action="images/Resume_Mustafa.pdf">
+          <button type="submit" class="btn btn-block btn-social btn-download"> <i class="fas fa-download"></i> Download PDF Resume</button>
+          </form>
+          <button type="button" class="btn btn-block btn-social btn-phone"> <i class="fas fa-mobile-alt"></i> <a href="tel:+1-832-804-0195">+1 (832) 804-0195</a></button>
+      
+      </div>
+    
+</div>

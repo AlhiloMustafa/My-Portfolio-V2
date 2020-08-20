@@ -1,0 +1,119 @@
+
+    <div class="row">
+        <div class="details_box col-lg-4">
+          <br>
+          <h3><i class="icon fas fa-briefcase"></i> Employment</h3>
+          <h6>
+          <table>
+            <tr>
+              <td>
+                  <h6>2013-2014   </h6>
+              </td>
+              <td class="line" >
+                <h6>|</h6>
+             </td>
+              <td >
+                <% if (Rbooitem) { %>
+                    <h6> <%=Rbooitem.Name%> </h6>
+                  <% } else { %>
+                    <h5>Boohiss no myVar!</h5>
+                  <% } %>
+                 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><p><%=Rbooitem.Maintitle%></p></p>
+              </td>
+            </tr>
+          </table></h6>
+        
+          <li> <%=Rbooitem.Paragraphs[0]%></li>
+          <li> <%=Rbooitem.Paragraphs[1]%></li>  
+          <hr>
+          <h6>
+            <table>
+              <tr>
+                <td>
+                    <h6>2012-2013    </h6>
+                </td>
+                <td class="line" >
+                  <h6>|</h6>
+               </td>
+                <td ><% if (Kbritem) { %>
+                        <h6><%=Kbritem.Maintitle%></h6>
+                      <% } else { %>
+                        <h5>Boohiss no Kbritem!</h5>
+                      <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    
+                  <p><%=Kbritem.Subtilte%></p>
+                </td>
+              </tr>
+            </table></h6>
+          </h6>
+          <li> <%=Kbritem.Paragraphs[0]%></li>
+          <li> <%=Kbritem.Paragraphs[1]%></li> 
+        
+        </div>
+      
+        <div class="details_box col-lg-4" >
+          <br>
+          <h3><i class="icon fas fa-graduation-cap"></i> Education</h3>
+          <h6>2018-2020 <br> University of Texas at Arlington  </h6>
+          
+          <li> Master of Science in Computer Science and Engineering</li> 
+          <li>GPA 3.58/4 </li>
+          <h6>Majors:</h6>
+          <li>Software Engineers</li>
+          <li>Database Systerm </li>
+          <p> </p>
+          <hr>
+          <h6>2008-2012 <br>Al-Mansour University Collage</h6>
+          <li>Bachelor of Science in Computer Communication Engineering</li>
+          <h6>Majors:</h6>
+          <li>Communication Engineering</li>
+  
+        </div>
+      
+        <div class="details_box col-lg-4">
+        <br>
+          <h3><i class="icon fas fa-laptop-code"></i> Skills</h3>
+          <h6>Methodologies:</h6>
+          <li>Scrum and Agile Methodology</li>
+
+          <h6>Langugaes:</h6>
+          <li>Python (intermediate)</li>
+          <li>JavaScript (intermediate)</li>
+          <li>CSS </li>
+          <li>HTML</li>
+          
+          <h6>Database:</h6>
+          <li>SQL</li>
+          <li>MySQL </li>
+          <li>MongoDB </li>
+
+          <h6>Cloud Computing:</h6>
+          <li>AWS</li>
+          <li>IBM Cloud</li>
+          <li>Microsoft Azure</li>
+
+          <h6>Frameworks and platforms :</h6>
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Laravel framework</li>
+          <li>Ionic framework</li>
+
+          <h6>Software Testing:</h6>
+          <li>JUnit</li>
+          <li>JaCoCo.</li>
+          <h6>Others:</h6>
+          <li>APIs </li>
+
+        </div>
+  
+      </div>
