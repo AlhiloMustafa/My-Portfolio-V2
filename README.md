@@ -3,7 +3,9 @@
 
 > It is my portfolio that includes my education, experience, projects, and all the contact details. It contains all the links to my social media, and the user able to download my pdf resume 
 
-![See it:](public/images/webpicture.JPG)
+<a href="https://rocky-meadow-77327.herokuapp.com/"><img src="public/images/webpicture.JPG" width="400"/><a>
+
+
 
 ---
 
