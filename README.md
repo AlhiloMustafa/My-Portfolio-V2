@@ -1,7 +1,7 @@
 # My Portfolio
 ###### Because I believe nothing can stop what we can do when we work together, I share what I learned with others
 
-> It is my portfolio that includes my education, experience, projects, and all the contact details. It contains all the links to my social media, and the user able to download my pdf resume 
+> It is my portfolio that includes my education, experience, projects, and all the contact details. It contains all the links to my social media, and the user able to download my PDF resume 
 
 Click to see it :point_down::
 
